@@ -1,7 +1,7 @@
 # Put this code intyo ther `Scripting` section of Blender
 # The `verts` and `faces` variables must be coppied dirtectly from the response of the A.I., as web requests currently do not work.
 
-import bpy
+import bpy # Blender interface library -- can only be used in Blender
 from random import random
 
 
@@ -27,8 +27,10 @@ def create_obj(verts, faces, name="New_" + str(random())):
     return name
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
+    # Change the values of these variables depepending on what you want. It's like a 3D connect-the-dots,
+    # with the tuples in `verts` being the points and the tuples in `faces` being the lines connecting them
     verts = [(4, -4, 0), (4, 4, 0), (-2, -4, 0), (-2, 4, 0), (4, -4, 2), (4, 4, 2), (-2, -4, 2), (-2, 4, 2)]
     faces = [(0, 1, 3, 2), (4, 5, 7, 6), (1, 3, 7, 5), (0, 2, 6, 4)]
     
-    print(create_obj(verts, faces))
+    create_obj(verts, faces)
