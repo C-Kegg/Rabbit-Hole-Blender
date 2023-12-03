@@ -1,4 +1,4 @@
-# Put this code intyo ther `Scripting` section of Blender
+# Put this code into the `Scripting` section of Blender
 # The `verts` and `faces` variables must be coppied dirtectly from the response of the A.I., as web requests currently do not work.
 
 import bpy # Blender interface library -- can only be used in Blender
