@@ -16,7 +16,7 @@ defaults = {
   'candidate_count': 1, # This is how many responses the model gives
   'top_k': 40, # Don't mess with this
   'top_p': 0.95, # Or this
-  'max_output_tokens': 1024, # Maximum number of characters in response. Make this number larger for more complex requests/responses
+  'max_output_tokens': 32768, # Maximum number of characters in response. Make this number larger for more complex requests/responses
   'stop_sequences': [],
   'safety_settings': [{"category":"HARM_CATEGORY_DEROGATORY","threshold":"BLOCK_LOW_AND_ABOVE"},{"category":"HARM_CATEGORY_TOXICITY","threshold":"BLOCK_LOW_AND_ABOVE"},{"category":"HARM_CATEGORY_VIOLENCE","threshold":"BLOCK_MEDIUM_AND_ABOVE"},{"category":"HARM_CATEGORY_SEXUAL","threshold":"BLOCK_MEDIUM_AND_ABOVE"},{"category":"HARM_CATEGORY_MEDICAL","threshold":"BLOCK_MEDIUM_AND_ABOVE"},{"category":"HARM_CATEGORY_DANGEROUS","threshold":"BLOCK_MEDIUM_AND_ABOVE"}],
 }
