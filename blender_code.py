@@ -1,30 +1,33 @@
+# ** WARNING **
+# This code is not in use. Please use the `blender_code_with_genai` file.
 # Put this code into the `Scripting` section of Blender
-# The `verts` and `faces` variables must be coppied dirtectly from the response of the A.I., as web requests currently do not work.
+# The `verts` and `faces` variables must be coppied dirtectly from the response of the A.I. at the momment, as web requests currently do not work properly.
 
-import bpy # Blender interface library -- can only be used in Blender
+import bpy, json
 from random import random
 
 
-def create_obj(verts, faces, name="New_" + str(random())):
+
+def create_obj(data:str, name="New_" + str(random())):
     """Creates an object with the given name, vertices, and faces.
     
     Arguments:
-        verts = The vertices of the object to create, given as a list of tuples representing points in space.
-        
-        faces = The faces of the object to create, given as a list of tuples representing indexes of vertices. **Note**: For 3-point faces, the order of the numbers does not matter.
-        
-        name = The name of the object to create. By default is "Name" + a random number between 0 and 1.
+        data = The JSON data of the object to create.
+
+        name = The name of the object to create. By default is "Name" + a random float between 0 and 1.
     Returns:
         Name of object created
-        """
-    mesh = bpy.data.meshes.new(name)
-    object = bpy.data.objects.new(name, mesh)
+    """
+    data_proc = json.loads(data)
+    if data_proc[""]:
+        mesh = bpy.data.meshes.new(name)
+        object = bpy.data.objects.new(name, mesh)
     
-    bpy.context.collection.objects.link(object)
+        bpy.context.collection.objects.link(object)
     
-    mesh.from_pydata(verts, [], faces)
-    
-    return name
+        mesh.from_pydata(verts, [], faces)
+    elif data_proc:
+        return name
 
 
 if __name__ == "__main__": 
