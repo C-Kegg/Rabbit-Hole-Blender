@@ -8,6 +8,8 @@
 # 4: Select `Blender: Start`. In the file picker, select the Blender app.
 # 5: Run the code by pressing `Command + Shift + P` on Mac or `Control + Shift + P` on others, typing `Blender`, and selecting `Blender: Run Script`.
 
+# WARNING!!!
+# This code is in active development.
 import bpy
 from random import random
 import googlegenai as genai
@@ -87,14 +89,14 @@ def create_obj(request: str):
     mat = bpy.data.materials.new(name=("Material" + str(random())))
     obj.data.materials.append(mat)
 
-    # Set material properties for gold
+    # Set material properties
     mat.use_nodes = True
     nodes = mat.node_tree.nodes
     principled = nodes.get("Principled BSDF")
 
-    # Set gold color and roughness
-    principled.inputs["Base Color"].default_value = (255,95,88,0.01)  # Gold color
-    principled.inputs["Roughness"].default_value = 1  # Adjust roughness
+    # Set color and roughness
+    principled.inputs["Base Color"].default_value = r["color"]  # Color
+    principled.inputs["Roughness"].default_value = r["roughness"]  # Adjust roughness
 
      # Optional: Render settings
     bpy.context.scene.render.engine = 'CYCLES'  # Set render engine to Cycles
