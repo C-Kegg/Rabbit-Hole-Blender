@@ -6,7 +6,7 @@ $ pip install google-generativeai
 
 import google.generativeai as genai
 
-apikey = "AIzaSyCe09OtTktAXVyuBbX3ZMxSaO5c_EzJ7iQ" # Only use this key for Dragons-related projects
+apikey = "API_KEY" # Use your key here
 
 genai.configure(api_key=apikey)
 
