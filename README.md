@@ -14,7 +14,13 @@
     1. Open the `Extensions` menu
     2. Search for "Blender"
     3. Install the `Blender Development` extension by Jacques Lucke
- 5. Run the code:
+ 5. Get your Google MakerSuite API key:
+    1. Go to https://makersuite.google.com/app/apikey
+    2. Click `Create API key in new project`
+    3. Copy the API key
+    4. Paste into the googlegenai.py file
+* Google MakerSuite is not available to people under 18 
+ 7. Run the code:
     1. Press `Command + Shift + P` on Mac or `Control + Shift + P` on Windows/Linux
     2. Search for "Blender"
     3. Select `Blender: Start`
