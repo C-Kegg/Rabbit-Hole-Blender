@@ -28,6 +28,7 @@
     5. Wait for the process to complete
     6. Open Blender
     7. Select `New File - General`
-    8. Press `Command + Shift + P` on Mac or `Control + Shift + P` on Windows/Linux
-    9. Search for "Blender"
-    10. Select `Blender: Run Script`
+    8. Open VS Code
+    9. Press `Command + Shift + P` on Mac or `Control + Shift + P` on Windows/Linux
+    10. Search for "Blender"
+    11. Select `Blender: Run Script`
