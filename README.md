@@ -32,3 +32,5 @@
     9. Press `Command + Shift + P` on Mac or `Control + Shift + P` on Windows/Linux
     10. Search for "Blender"
     11. Select `Blender: Run Script`
+
+THIS CODE IS CURRENTLY NOT UNDER DEVELOPMENT
